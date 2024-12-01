@@ -22,7 +22,7 @@ This project is designed to analyze the organizational structure of BIG COMPANY 
 
 To get started, clone the repository to your local machine:
 
-```bash
+
 git clone <repository-url>
 cd <project-directory>
 ### 2. Maven Setup
@@ -37,7 +37,7 @@ mvn clean install
 ### 4. Running the Program
 To run the application, execute the following command:
 
-bash
+
 Copy code
 mvn exec:java -Dexec.mainClass="org.example.CompanyAnalyzer"
 This command will read the employee data from the input CSV file, process it, and output the analysis results to the console.
@@ -53,25 +53,25 @@ This will execute all unit tests written using JUnit.
 CSV File Format
 The program expects the input CSV file to have the following format:
 
-Id	FirstName	LastName	Salary	ManagerId
-123	Joe	Doe	60000	
-124	Martin	Chekov	45000	123
-125	Bob	Ronstad	47000	123
-300	Alice	Hasacat	50000	124
-305	Brett	Hardleaf	34000	300
+**Id   FirstName   LastName   Salary   ManagerId**
+
+123      Joe         Doe      60000
+
+124	   Martin	  Chekov      45000	     123
+
+125	   Bob	    Ronstad	    47000	    123
+
+300	   Alice	    Hasacat	    50000	    124
+
+305	  Brett	    Hardleaf	34000	       300
+
+
 Id: A unique identifier for the employee.
 FirstName: Employee's first name.
 LastName: Employee's last name.
 Salary: Employee's salary.
 ManagerId: The ID of the employee's manager (empty for the CEO).
-Example Input File (employees.csv)
-csv
 
-123,Joe,Doe,60000,
-124,Martin,Chekov,45000,123
-125,Bob,Ronstad,47000,123
-300,Alice,Hasacat,50000,124
-305,Brett,Hardleaf,34000,300
 Program Output
 The program will output the following types of reports:
 
@@ -95,7 +95,7 @@ Manager Compliance Check: For each manager, it calculates the average salary of 
 Reporting Line Check: The program checks the reporting line length for each employee by tracing their manager chain up to the CEO. If there are more than 4 managers in the chain, the employee is flagged.
 Output: After processing the data, the program outputs a report with the results.
 Example Output
-bash
+
 
 Managers who earn less than they should:
 Manager <Firstname>, <lastName>, earns <Salary> less than they should by <less Amount>
