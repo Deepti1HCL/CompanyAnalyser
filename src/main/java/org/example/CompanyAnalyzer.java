@@ -17,7 +17,7 @@ public class CompanyAnalyzer {
             String firstName = values[1];
             String lastName = values[2];
             double salary = Double.parseDouble(values[3]);
-            Integer managerId =0;
+            Integer managerId = null;
             if(values.length >=5) {
                 managerId = values[4].isEmpty() ? null : Integer.parseInt(values[4]);
             }

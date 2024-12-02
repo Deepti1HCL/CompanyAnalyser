@@ -76,6 +76,6 @@ public class CompanyAnalyzerTest {
         analyzer.analyzeReportingLines();
 
         // Assert that the output includes the employee with a long reporting line
-        assertTrue(outContent.toString().contains("Employee 305 Brett Hardleaf has a reporting line which is too long: 6 managers"));
+        assertTrue(outContent.toString().contains("Employee 305 Brett Hardleaf has a reporting line which is too long: 5 managers"));
     }
 }
